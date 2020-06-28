@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- Criado por Ybenson Augustave -->
+<html lang="br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Relógio | Ybenson Augustave</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <h3>Relógio analógico de trabalho usando HTML CSS e Javascript</h3>
+    <div class="relogio">
+      <div class="porca-central">
+</div>
+<div class="porca-central2">
+</div>
+<div class="indicadores">
+        <div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+</div>
+<div class="sec-hand">
+        <div class="sec">
+</div>
+</div>
+<div class="min-hand">
+        <div class="min">
+</div>
+</div>
+<div class="hr-hand">
+        <div class="hr">
+</div>
+</div>
+</div>
+<script>
+      const sec = document.querySelector(".sec");
+      const min = document.querySelector(".min");
+      const hr = document.querySelector(".hr");
+      setInterval(function(){
+        let time  = new Date();
+        let secs = time.getSeconds() * 6;
+        let mins = time.getMinutes() * 6;
+        let hrs = time.getHours() * 30;
+        sec.style.transform = `rotateZ(${secs}deg)`;
+        min.style.transform = `rotateZ(${mins}deg)`;
+        hr.style.transform = `rotateZ(${hrs+(mins/12)}deg)`;
+      });
+    </script>
+  </body>
+</html>
